@@ -1,0 +1,424 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+        
+            <title>Watch Store</title>
+            <meta name="descrption" content="watch"/>
+            <meta name="keyword" content="html"/>
+            <meta name="author" content="islington"/>
+            <link rel="stylesheet" href="../css/homefinal.css">
+        <style>/* styles.css */
+
+            
+        
+            
+            header h1 {
+                color: black;
+                font-size: 20px;
+                text-align: center;
+                color: white;
+            }
+            
+
+            header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+        
+        header nav ul li a {
+            font-size: 20px;
+            padding: 20px;
+            color: #333;
+            text-decoration: none;
+        }
+            
+            /*nav ul li a:hover {
+                color: #f5f5f5;
+            }*/
+            
+            
+            
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f2f1;
+                color: rgb(0, 0, 0);
+            }
+            /*
+            header {
+                background-color: rgb(0, 0, 0);
+                color: azure;
+                padding: 10px 0;
+                text-align: center;
+            } */
+            
+            .container {
+                width: 80%;
+                margin: auto;
+                padding: 20px;
+            }
+            
+            .product-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 20px;
+            }
+            
+            .product-card {
+                flex: 1 1 300px;
+                max-width: calc(33.33% - 20px);
+                box-sizing: border-box;
+            }
+            
+            .product-card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            }
+            
+            .product-card img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+            
+            .product-card h3 {
+                margin: 10px 0;
+            }
+            
+            .product-card p {
+                font-size: 14px;
+                color: darkslategrey;
+            }
+            
+            .product-card .price {
+                font-weight: bold;
+                color: rgb(74, 31, 31);
+            }
+            
+            .product-card .original-price {
+                text-decoration: line-through;
+                color: gray;
+                margin-left: 5px;
+            }
+            
+            /* Popup Styling */
+            .popup {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .popup-content {
+                background-color: white;
+                padding: 20px;
+                border-radius: 8px;
+                text-align: center;
+            }
+            
+            .popup button {
+                margin-top: 10px;
+                padding: 8px 16px;
+                background-color: #333;
+                color: white;
+                border: none;
+                border-radius: 4px;
+            }
+            
+            /* Feedback Form Section */
+            #feedback-form {
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                padding: 30px;
+                margin-top: 50px;
+                margin-bottom: 30px;
+            }
+            
+            #feedback-form h2 {
+                text-align: center;
+                color: #333;
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            
+            #feedback-form input,
+            #feedback-form textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+            
+            #feedback-form textarea {
+                resize: vertical;
+            }
+            
+            #feedback-form input:focus,
+            #feedback-form textarea:focus {
+                border-color: #007bff;
+                outline: none;
+            }
+            
+            #feedback-form button {
+                width: 100%;
+                padding: 12px;
+                background-color: #007bff;
+                color: white;
+                font-size: 16px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            
+            #feedback-form button:hover {
+                background-color: #0056b3;
+            }
+            
+        
+
+            
+            
+            </style>
+
+
+        </head>
+        <body>
+
+
+
+
+
+
+            <header>
+                <h1 style="color:black;text-align:center;font-size: 20px;">O B A K U</h1>
+                <nav>
+                <ul>
+                    <li><a href="../homefinal.html">Home</a></li>
+                    <li><a href="../PAGES/index.html">Blog</a></li>
+                    <li><a href="../PAGES/Research.html">Research</a></li>
+                    <li><a href="../PAGES/product.html">Product</a></li>
+                    <li><a href="../PAGES/AboutUs.html">About Us</a></li>
+                    <link rel="stylesheet" href="../courseework/css/navnfoot.css">
+                </ul>    
+                </nav>
+            </header>
+
+
+
+
+
+
+
+
+
+
+
+
+        <br><br><br><br>
+        <!-- <header>
+                <h1 >Product</h1>
+            </header>-->
+            <br>
+        <h1 style="text-align: center;"><span style="color: blueviolet;font-weight: bold;">Our</span> <span style="color: brown;font-weight: bold;">Exclusive </span> <span style="color:green;font-weight: bold;">Collection</span></h1>
+            <div class="container">
+                
+                <div class="product-list">
+                    <!-- Product 1 -->
+                    <div class="product-card" data-id="1" data-name="Braun Watch AW10" data-price="2490">
+                        <a href="watch1.html">
+                            <img src="../photos/wat1.png" alt="Braun Watch">
+                            <h3>Brawn Watch AW10</h3>
+                            <p class="price">RS 2490 <span class="original-price">RS 3000</span></p>
+                        </a>
+                        <input type="number" class="quantity" min="1" placeholder="Qty">
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card" data-id="2" data-name="Apple Watch Ultra 2" data-price="2990">
+                        <a href="watch2.html">
+                            <img src="../photos/wat2.png" alt="Apple Watch Ultra 2">
+                            <h3>Apple Watch Ultra 2</h3>
+                            <p class="price">RS 2990 <span class="original-price">RS 3990</span></p>
+                        </a>
+                        <input type="number" class="quantity" min="1" placeholder="Qty">
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card" data-id="3" data-name="Black Round Chronograph Watch" data-price="6900">
+                        <a href="watch3.html">
+                            <img src="../photos/wat3.png" alt="STORM-SILVER">
+                            <h3>Black Round Chronograph Watch</h3>
+                            <p class="price">RS 6900 <span class="original-price">RS 9000</span></p>
+                        </a>
+                        <input type="number" class="quantity" min="1" placeholder="Qty">
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card" data-id="4" data-name="Round Skeleton Watch" data-price="5500">
+                        <a href="watch4.html">
+                            <img src="../photos/wat4.png" alt="CHIALILLE-OCEAN">
+                            <h3>Round Skeleton Watch</h3>
+                            <p class="price">RS 5500 <span class="original-price">RS 6000</span></p>
+                        </a>
+                        <input type="number" class="quantity" min="1" placeholder="Qty">
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product-card" data-id="5" data-name="Round Silver Analog Watch with black strap" data-price="6900">
+                        <a href="watch5.html">
+                            <img src="../photos/wat5.png" alt="MINERAL-OCEAN">
+                            <h3>Round Silver Analog Watch with black strap</h3>
+                            <p class="price">RS 6900 <span class="original-price">RS 9000</span></p>
+                        </a>
+                        <input type="number" class="quantity" min="1" placeholder="Qty">
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="product-card" data-id="6" data-name="Close-Up Shot of a Wristwatch" data-price="7000">
+                        <a href="watch6.html">
+                            <img src="../photos/wat6.png" alt="MINERAL-OCEAN">
+                            <h3>Close-Up Shot of a Wristwatch</h3>
+                            <p class="price">RS 7000 <span class="original-price">RS 7800</span></p>
+                        </a>
+                        <input type="number" class="quantity" min="1" placeholder="Qty">
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="product-card" data-id="7" data-name="Apple Watch Series 5" data-price="2490">
+                        <a href="watch7.html">
+                            <img src="../photos/wat7.png" alt="Apple Watch">
+                            <h3>Apple Watch Series 5</h3>
+                            <p class="price">RS 2490 <span class="original-price">RS 3000</span></p>
+                        </a>
+                        <input type="number" class="quantity" min="1" placeholder="Qty">
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="product-card" data-id="8" data-name="Audemars Piguet Royal Oak" data-price="1490">
+                        <a href="watch8.html">
+                            <img src="../photos/wat8.png" alt="APRO">
+                            <h3>Audemars Piguet Royal Oak</h3>
+                            <p class="price">RS 1490 <span class="original-price">RS 2650</span></p>
+                        </a>
+                        <input type="number" class="quantity" min="1" placeholder="Qty">
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+
+                    <!-- Product 9 -->
+                    <div class="product-card" data-id="9" data-name="Casio Quartz" data-price="2000">
+                        <a href="watch9.html">
+                            <img src="../photos/wat9.png" alt="Casio">
+                            <h3>Casio Quartz</h3>
+                            <p class="price">RS 2000 <span class="original-price">RS 3110</span></p>
+                        </a>
+                        <input type="number" class="quantity" min="1" placeholder="Qty">
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <h2>Feedback</h2>
+                <form id="feedback-form">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="text" id="contact" placeholder="Your Contact" required>
+                    <textarea id="feedback" placeholder="Your Feedback" rows="5" required></textarea>
+                    <button type="submit">Submit Feedback</button>
+                </form>
+            </div>
+
+            <!-- Popup for cart addition or feedback submission -->
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <p id="popup-message"></p>
+                    <button id="popup-close">Close</button>
+                </div>
+            </div>
+
+        
+
+
+
+
+
+            <footer>
+                <section class="footers">
+                <div class="row">
+                    <!-- Logo -->
+                    <div class="column">
+                    <p style="color: black; font-size: 25px; font-weight: bold;">O B A K U</p>
+                    <p style="color: black; font-size: 12px; font-weight: bold; line-height: 5px;">DENMARK</p>
+                    </div>
+            
+                    <!-- Online Chat Section -->
+                    <div class="column">
+                    <h2 style="color:black;font-size: 18px;font-weight: bold;">Online Chat Customer Service</h2>
+                    <p>Mon-Fri: 08:00AM to 06:00PM</p>
+                    <h3>Contact number</h3>
+                    <p>+977 9810010101</p>
+                    <h4>Email address</h4>
+                    <p>info@obaku.com</p>
+                    <p>us@obaku.com</p>
+                    </div>
+            
+                    <!-- About -->
+                    <div class="column">
+                    <h5 style="margin-left :35px;margin-top: 15px; color:black;font-size: 18px;font-weight: bold;">About</h5>
+                    <ul>
+                        <li><a href="../PAGES/index.html"><strong>Blog</strong></a></li>
+                        <li><a href="../PAGES/AboutUs.html"><strong>Contact Us</strong></a></li>
+                    </ul>
+                    </div>
+            
+                    <!-- Follow -->
+                    <div class="column">
+                    <h6 style="margin-left: 5px;margin-top: 15px; color:black;font-size: 18px;font-weight: bold;"> Follow Us</h6>  
+                    <p><a href="https://www.facebook.com/obakudenmark" target="_blank">Facebook</a></p>
+                    <p><a href="https://www.instagram.com/obakuofficial/?hl=en" target="_blank">Instagram</a></p>
+                    <p><a href="https://www.linkedin.com/company/obakudenmark/" target="_blank">LinkedIn</a></p>
+                    <p><a href="https://www.pinterest.com/obakudenmark/" target="_blank">Pinterest</a></p>
+                    </div>
+                </div>
+                
+                </section>
+                <p class="copyright">&copy; 2025 Obaku-Inspired. All rights reserved.</p>
+            </footer>
+            </section>
+            
+            
+            <script src="../javascrip/homefinal.js"></script>
+            <a href="#" class="to-top">
+                <img src="../photos/angle-up-solid.svg" alt="Back to Top" width="40" height="40">
+            </a>
+            <script>
+                const toTop = document.querySelector('.to-top');
+
+        window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 100) {
+        toTop.classList.add("active");
+        } else {
+        toTop.classList.remove("active");
+        }
+        });
+            </script>
+            </body>
+            </html>
+            
+            

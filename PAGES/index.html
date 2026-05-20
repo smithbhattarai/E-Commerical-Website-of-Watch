@@ -1,0 +1,252 @@
+    <!DOCTYPE html>
+    <html >
+    <head>
+      <title>Obaku Watch</title>
+        <meta name="descrption" content="watch"/>
+        <meta name="keyword" content="html"/>
+        <meta name="author" content="islington"/>
+        <link rel="stylesheet" href="../css/homefinal.css">
+      <style>
+
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            font-size: 20px;
+        }
+        
+        .h2line{
+          margin: 0px;
+          padding: 10px;
+        }
+        
+        
+        /* Main Content Section */
+        .content {
+            width: 1100px;
+            max-width: 1200px;
+            margin: auto; /*centers contain horizontally within  a container*/
+            padding: 70px;
+        }
+        
+        .content-body {
+            display: flex; /* allows image and text in a row */
+            gap: 30px; /*gap between items */
+            margin-bottom: 30px; /* space below this section */
+        }
+        
+        .content-image {
+            max-width: 400px;
+            height: 375px;
+            border-radius: 16px; /*rounds the corner to make image look softer */
+        }
+        
+        /* Blog Posts Section */
+        main {
+            padding: 30px;
+        }
+        
+        .blog-posts {
+            display: flex; /*enables flex box on a container */
+            flex-wrap: wrap; /*by default flexbox tries to fit all items in single line, wrap helps to break items into multiple lines */
+            gap: 25px;
+            justify-content: space-between; /* ensures that the first item is aligned at the start and last item at the end by making sure that the lines are equally distributed*/
+        }
+        .blog-posts{
+            display: grid; /* uses grid layout */
+            grid-template-columns: repeat(3, 1fr); /* creates 3 equal-width columns */
+            gap: 20px; /* space between items */
+        }
+        
+        .post {
+            width: 300px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-sizing: border-box;
+        }
+        
+        .post-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        .post h3 {
+            font-size: 45px;
+            margin-top: 25px; /* adds space above the title, so it doesnot touch any other elements or image*/
+        }
+        
+        .post p {
+            font-size: 20px;
+            color: #777;
+        }
+        
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            color: #333;
+            font-weight: bold;
+            padding: 15px; 
+            border: 2px solid #333;
+            border-radius: 5px; /* to make the edges rounded */
+        }
+        
+        .read-more:hover {
+            background-color: #333; /* when using hover background color changes into grey */
+            color: white;
+        }
+                </style>
+            </head>
+
+
+      <header>
+        <h1 style="color:black;text-align:center;font-size: 20px;">O B A K U</h1>
+        <nav>
+          <ul>
+            <li><a href="../homefinal.html">Home</a></li>
+            <li><a href="../PAGES/index.html">Blog</a></li>
+            <li><a href="../PAGES/Research.html">Research</a></li>
+            <li><a href="../PAGES/product.html">Product</a></li>
+            <li><a href="../PAGES/AboutUs.html">About Us</a></li>
+            <link rel="stylesheet" href="../courseework/css/navnfoot.css">
+          </ul>    
+        </nav>
+      </header>
+            
+      <br>
+                <!--Main Content Section -->
+            <div class="content">
+            <section class="content-body">
+              <img src="../photos/watch4.jpg" alt="Watch Image" class="content-image">
+              <div class="content-text"> 
+                <div class="h2line">
+                    <h2>The Watch Industry and Technology</h2></div>
+                    <p><br>The watch industry has been rapidly growing ever since it was discovered. It has always been about precision,designs,skills and manymore. As the rise of new technology,watches are evolving in exciting ways.<br> Industries are using technology to improve quality,connect with customers,and create new types of watches.
+                        As the technology continues to advance, we can expect more innovations in watch designs, functionality and how they are brought and sold.
+                    These technological innvotaions not only impact on the designs and innvotaions but also the way consumer reacts on how they are marketed and showed.</p>
+                    </div>
+            </section>
+                
+    <!-- Blog Posts section -->
+    <main>
+        <section class="blog-posts">
+            <article class="post">
+                <img src="../photos/watch1.jpg" alt="Smartwatches" class="post-image">
+                <div class="post-content">
+                    <h1>Smartwatches:The rising gadget</h1>
+                    <p class="post-excerpt"> Learn how smartwatches are the rising gadget in today's world.....</p>
+                    <a href="article.html" class="read-more">Read More</a>  
+                    </div> 
+            </article>
+
+            <article class="post">
+                <img src="../photos/technology.jpg" alt="Design" class="post-image">
+                <div class="post-content">
+                    <h1>Where technology meets design</h1>
+                    <p class="post-excerpt"> See how technology can drive through the designs and make them more classy, creative and innovative......</p>
+                    <a href="tech.html" class="read-more">Read More</a>
+                </div>
+            </article>
+            
+            <article class="post">
+                <img src="../photos/luxurywatch.jpg" alt="luxury watch" class="post-image">
+                <div class="post-content">
+                    <h1>Understanding the value of luxury watches</h1>
+                    <p class="post-excerpt">what makes a luxury watch worth the investment? We dive into materials, history, craftsmanship...</p>
+                    <a href="luxury.html" class="read-more">Read More</a>
+                </div>
+            </article>
+        
+            <article class="post">
+                <img src="../photos/watch7.jpg" alt="luxury leather strap watch" class="post-image">
+                <div class="post-content">
+                    <h1> Luxury leather straps</h1>
+                    <p class="post-excerpt"> Discover the rich textures and refined design of watches with high-quality leather straps....</p>
+                    <a href="leather.html" class="read-more"> Read More</a>
+                </div>
+            </article>
+
+            <article class="post">
+                <img src="../photos/digwatch.jpg" alt="Digital world" class="post-image">
+                <div class="post-content">
+                    <h1>Digital marketing and sales</h1>
+                    <p class="post-excerpt"> See how digital marketing makes a vast difference in watch world.....</p>
+                    <a href="digital.html" class="read-more"> Read More</a>
+                </div>
+            </article>
+
+            <article class="post">
+                <img src="../photos/watch8.jpg" alt="Future of watches" class="post-image">
+                <div class="post-content">
+                    <h1> Booming future of watches</h1>
+                    <p class="post-excerpt"> In this technological world the era where everything needs..............</p>
+                    <a href="future.html" class="read-more"> Read More</a>
+                </div>
+            </article>
+            </section>
+            </main>
+            </div>
+            <footer>
+              <section class="footers">
+                <div class="row">
+                  <!-- Logo -->
+                  <div class="column">
+                    <p style="color: black; font-size: 25px; font-weight: bold;">O B A K U</p>
+                    <p style="color: black; font-size: 12px; font-weight: bold; line-height: 5px;">DENMARK</p>
+                  </div>
+            
+                  <!-- Online Chat Section -->
+                  <div class="column">
+                    <h2 style="color:black;font-size: 18px;font-weight: bold;">Online Chat Customer Service</h2>
+                    <p>Mon-Fri: 08:00AM to 06:00PM</p>
+                    <h3>Contact number</h3>
+                    <p>+977 9810010101</p>
+                    <h4>Email address</h4>
+                    <p>info@obaku.com</p>
+                    <p>us@obaku.com</p>
+                  </div>
+            
+                  <!-- About -->
+                  <div class="column">
+                    <h5 style="margin-left :35px;margin-top: 15px; color:black;font-size: 18px;font-weight: bold;">About</h5>
+                    <ul>
+                      <li><a href="../PAGES/index.html"><strong>Blog</strong></a></li>
+                      <li><a href="../PAGES/AboutUs.html"><strong>Contact Us</strong></a></li>
+                    </ul>
+                  </div>
+            
+                  <!-- Follow -->
+                  <div class="column">
+                    <h6 style="margin-left: 5px;margin-top: 15px; color:black;font-size: 18px;font-weight: bold;"> Follow Us</h6>  
+                    <p><a href="https://www.facebook.com/obakudenmark" target="_blank">Facebook</a></p>
+                    <p><a href="https://www.instagram.com/obakuofficial/?hl=en" target="_blank">Instagram</a></p>
+                    <p><a href="https://www.linkedin.com/company/obakudenmark/" target="_blank">LinkedIn</a></p>
+                    <p><a href="https://www.pinterest.com/obakudenmark/" target="_blank">Pinterest</a></p>
+                  </div>
+                </div>
+                
+              </section>
+              <p class="copyright">&copy; 2025 Obaku-Inspired. All rights reserved.</p>
+            </footer>
+          </section>
+          
+            <script src="../javascrip/homefinal.js"></script>
+            <a href="#" class="to-top">
+              <img src="../photos/angle-up-solid.svg" alt="Back to Top" width="40" height="40">
+          </a>
+            <script>
+              const toTop = document.querySelector('.to-top');
+
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 100) {
+        toTop.classList.add("active");
+      } else {
+        toTop.classList.remove("active");
+      }
+    });
+            </script> 
+          </body>
+          </html>
+          
+            

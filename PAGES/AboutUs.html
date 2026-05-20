@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<!-- Declares that this document is an HTML5 document -->
+<html>
+<!-- Start of the HTML document -->
+<head>
+  <!-- Contains meta information and linked resources for the document -->
+  <title>About Us</title>
+  <!-- Sets the title of the page that appears in the browser tab -->
+  <meta name="description" content="watch"/>
+  <!-- Meta tag intended to provide a description for the page -->
+  <meta name="keyword" content="html"/>
+  <!-- Meta tag for keywords related to the page content -->
+  <meta name="author" content="islington"/>
+  <!-- Meta tag specifying the author of the document -->
+  <link rel="stylesheet" href="../css/homefinal.css">
+  <!-- Links an external CSS file for additional styling -->
+  <style>
+    /* Internal CSS styles for this page */
+    body {
+      font-family: Arial, sans-serif;
+      /* Sets the font family for the entire document to Arial with sans-serif as a fallback */
+      background-color: #f9f4ed;
+      /* Sets a light background color for the page */
+    }
+    .about-us {
+      text-align: center;
+      /* Centers the text inside elements with the class "about-us" */
+      padding: 50px 20px;
+      /* Adds 50px vertical and 20px horizontal padding around the content */
+    }
+    .about-us h1 {
+      font-size: 30px;
+      /* Sets the font size of the h1 element inside the "about-us" section */
+      margin-bottom: 20px;
+      /* Adds a 20px margin below the h1 element */
+    }
+    .cards-container {
+      display: flex;
+      /* Uses Flexbox layout to arrange child elements */
+      flex-wrap: wrap;
+      /* Allows child elements to wrap onto multiple lines if necessary */
+      justify-content: center;
+      /* Centers the child elements horizontally within the container */
+      gap: 20px;
+      /* Adds a 20px gap between each card element */
+    }
+    .card {
+      background-color: white;
+      /* Sets the background color of the card to white */
+      border-radius: 10px;
+      /* Rounds the corners of the card by 10px */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      /* Adds a subtle shadow below the card for depth */
+      width: 250px;
+      /* Sets the fixed width of the card to 250px */
+      padding: 20px;
+      /* Adds padding inside the card for spacing */
+      text-align: center;
+      /* Centers the text within the card */
+      transition: transform 0.3s;
+      /* Animates transformations (like scaling) over 0.3 seconds */
+    }
+    .card:hover {
+      transform: scale(1.05);
+      /* Scales the card up by 5% when hovered to create a zoom effect */
+    }
+    .card img {
+      width: 100px;
+      /* Sets the width of the image to 100px */
+      height: 100px;
+      /* Sets the height of the image to 100px */
+      border-radius: 50%;
+      /* Makes the image circular by rounding its corners to 50% */
+      object-fit: cover;
+      /* Ensures the image covers the area without distortion */
+      margin-bottom: 15px;
+      /* Adds a 15px margin below the image */
+    }
+    .card h2 {
+      font-size: 20px;
+      /* Sets the font size for the h2 element inside each card */
+      margin-bottom: 10px;
+      /* Adds a 10px margin below the h2 element */
+      color: #333;
+      /* Sets the text color to a dark gray */
+    }
+    .card p {
+      font-size: 12px;
+      /* Sets the font size of paragraph text inside a card */
+      margin: 5px 0;
+      /* Adds a 5px vertical margin and 0 horizontal margin */
+      color: #555;
+      /* Sets the text color to a medium gray */
+    }
+    .card p strong {
+      color: #333;
+      /* Sets the color of strong (bold) text inside a paragraph to dark gray */
+    }
+    /* Feedback Form Section */
+    #feedback-form {
+      background-color: #fff;
+      /* Sets the background color of the form to white */
+      border-radius: 8px;
+      /* Rounds the corners of the form by 8px */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      /* Adds a shadow around the form for a subtle 3D effect */
+      padding: 30px;
+      /* Adds 30px padding inside the form */
+      margin-top: 50px;
+      /* Adds a 50px margin above the form */
+      margin-bottom: 30px;
+      /* Adds a 30px margin below the form */
+    }
+    #feedback-form h2 {
+      text-align: center;
+      /* Centers the heading text inside the form */
+      color: #333;
+      /* Sets the text color to dark gray */
+      font-size: 24px;
+      /* Sets the font size for the heading */
+      margin-bottom: 20px;
+      /* Adds a 20px margin below the heading */
+    }
+    #feedback-form input,
+    #feedback-form textarea {
+      width: 100%;
+      /* Makes input fields and the textarea span the full width of the form */
+      padding: 10px;
+      /* Adds 10px padding inside the fields for better readability */
+      margin-bottom: 15px;
+      /* Adds a 15px margin below each field */
+      border: 1px solid #ddd;
+      /* Gives the fields a light gray border */
+      border-radius: 5px;
+      /* Rounds the corners of the input fields by 5px */
+      font-size: 16px;
+      /* Sets the font size inside the fields */
+    }
+    #feedback-form textarea {
+      resize: vertical;
+      /* Allows the textarea to be resized vertically only */
+    }
+    #feedback-form input:focus,
+    #feedback-form textarea:focus {
+      border-color: #007bff;
+      /* Changes the border color to blue when a field is focused */
+      outline: none;
+      /* Removes the default outline on focus */
+    }
+    #feedback-form button {
+      width: 100%;
+      /* Makes the button span the full width of the form */
+      padding: 12px;
+      /* Adds padding inside the button for better sizing */
+      background-color: #007bff;
+      /* Sets the button's background color to blue */
+      color: white;
+      /* Sets the button text color to white */
+      font-size: 16px;
+      /* Sets the font size for the button text */
+      border: none;
+      /* Removes any default border from the button */
+      border-radius: 5px;
+      /* Rounds the corners of the button by 5px */
+      cursor: pointer;
+      /* Changes the cursor to a pointer on hover to indicate it's clickable */
+      transition: background-color 0.3s;
+      /* Animates changes to the background color over 0.3 seconds */
+    }
+    #feedback-form button:hover {
+      background-color: #0056b3;
+      /* Darkens the button's background color when hovered */
+    }
+  </style>
+</head>
+<!-- End of the head section -->
+<body>
+<!-- Start of the document body (visible content) -->
+  <header>
+  <!-- Header section for the website -->
+    <h1 style="color:black;text-align:center;font-size: 20px;">O B A K U</h1>
+    <!-- Displays the site name/logo with inline styling for color, alignment, and size -->
+    <nav>
+    <!-- Navigation element containing links to other pages -->
+      <ul>
+      <!-- Unordered list to hold the navigation links -->
+        <li><a href="../homefinal.html">Home</a></li>
+        <!-- List item with a link to the Home page -->
+        <li><a href="./PAGES/index.html">Blog</a></li>
+        <!-- List item with a link to the Blog page -->
+        <li><a href="./PAGES/Research.html">Research</a></li>
+        <!-- List item with a link to the Research page -->
+        <li><a href="./PAGES/product.html">Product</a></li>
+        <!-- List item with a link to the Product page -->
+        <li><a href="./PAGES/AboutUs.html">About Us</a></li>
+        <!-- List item with a link to the About Us page -->
+        <link rel="stylesheet" href="../courseework/css/navnfoot.css">
+        <!-- Links an additional stylesheet for navigation and footer styles (placed inside the list) -->
+      </ul>
+    </nav>
+  </header>
+  <!-- Second header instance (possibly for redundancy or different display contexts) -->
+  <header>
+    <!-- Header section repeated -->
+    <h1 style="color:black;text-align:center;font-size: 20px;">O B A K U</h1>
+    <!-- Displays the site name/logo again with the same inline styles -->
+    <nav>
+      <!-- Navigation element repeated -->
+      <ul>
+        <!-- Unordered list for navigation links -->
+        <li><a href="../homefinal.html">Home</a></li>
+        <!-- Home link -->
+        <li><a href="../PAGES/index.html">Blog</a></li>
+        <!-- Blog link -->
+        <li><a href="../PAGES/Research.html">Research</a></li>
+        <!-- Research link -->
+        <li><a href="../PAGES/product.html">Product</a></li>
+        <!-- Product link -->
+        <li><a href="../PAGES/AboutUs.html">About Us</a></li>
+        <!-- About Us link -->
+        <link rel="stylesheet" href="../courseework/css/navnfoot.css">
+        <!-- Links the stylesheet for navigation and footer (again inside the list) -->
+      </ul>
+    </nav>
+  </header>
+  <br><br>
+  <!-- Inserts two line breaks for vertical spacing -->
+  <div class="about-us">
+  <!-- Main container for the About Us section -->
+    <h1>About Us</h1>
+    <!-- Heading for the About Us section -->
+    <div class="cards-container">
+    <!-- Flex container to hold multiple team member cards -->
+      <!-- Card 1 -->
+      <div class="card">
+      <!-- Individual card container for a team member -->
+        <img src="../photos/smith.png" alt="Profile Picture">
+        <!-- Displays the profile image for Smith with alternative text -->
+        <h2>Smith Bhattarai</h2>
+        <!-- Displays the team member's name -->
+        <a href="smith.html" class="btn">View Details</a>
+        <!-- Link to a detailed page for Smith with a class "btn" for button styling -->
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <!-- Individual card container for a team member -->
+        <img src="../photos/dinesh.png" alt="Profile Picture">
+        <!-- Displays the profile image for Dinesh -->
+        <h2>Dinesh Lamichhane</h2>
+        <!-- Displays the team member's name -->
+        <a href="dinesh.html" class="btn">View Details</a>
+        <!-- Link to a detailed page for Dinesh -->
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <!-- Individual card container for a team member -->
+        <img src="../photos/aayush.png" alt="Profile Picture">
+        <!-- Displays the profile image for Aayush -->
+        <h2>Aayush Thakur</h2>
+        <!-- Displays the team member's name -->
+        <a href="aayush.html" class="btn">View Details</a>
+        <!-- Link to a detailed page for Aayush -->
+      </div>
+      <!-- Card 4 -->
+      <div class="card">
+        <!-- Individual card container for a team member -->
+        <img src="../photos/smriti.png" alt="Profile Picture">
+        <!-- Displays the profile image for Smriti -->
+        <h2>Smriti Khadka</h2>
+        <!-- Displays the team member's name -->
+        <a href="smriti.html" class="btn">View Details</a>
+        <!-- Link to a detailed page for Smriti -->
+      </div>
+      <!-- Card 5 -->
+      <div class="card">
+        <!-- Individual card container for a team member -->
+        <img src="../photos/uzwal.png" alt="Profile Picture">
+        <!-- Displays the profile image for Uzwal -->
+        <h2>Uzwal Sharma</h2>
+        <!-- Displays the team member's name -->
+        <a href="ujwal.html" class="btn">View Details</a>
+        <!-- Link to a detailed page for Uzwal (note the href is "ujwal.html") -->
+      </div>
+    </div>
+  </div>
+  <h2 style="text-align: center;">Join Us </h2>
+  <!-- Heading for the feedback/join form, centered -->
+  <form id="feedback-form">
+  <!-- Form element with the id "feedback-form" to collect user input -->
+    <input type="text" id="name" placeholder="Your Name" required>
+    <!-- Input field for the user's name with a placeholder and required attribute -->
+    <input type="text" id="email" placeholder="Your Email" required>
+    <!-- Input field for the user's email with a placeholder and required attribute -->
+    <input type="text" id="contact" placeholder="Your Contact" required>
+    <!-- Input field for the user's contact information with a placeholder and required attribute -->
+    <input type="text" id="address" placeholder="Your Address" required>
+    <!-- Input field for the user's address with a placeholder and required attribute -->
+    <textarea id="feedback" placeholder="Your Message For Us" rows="5" required></textarea>
+    <!-- A textarea for the user's message with 5 rows visible and the required attribute -->
+    <button type="submit">Send</button>
+    <!-- A button to submit the form with the text "Send" -->
+  </form>
+  </div>
+  <!-- Popup for cart addition or feedback submission -->
+  <div id="popup" class="popup">
+  <!-- Container for a popup element (could be used for notifications) -->
+    <div class="popup-content">
+    <!-- Inner container for the popup content -->
+      <p id="popup-message"></p>
+      <!-- Paragraph to display the popup message -->
+      <button id="popup-close">Close</button>
+      <!-- Button to close the popup -->
+    </div>
+  </div>
+  <footer>
+  <!-- Footer section of the page -->
+    <section class="footers">
+    <!-- Section element with class "footers" for styling the footer content -->
+      <div class="row">
+      <!-- Row container to hold footer columns -->
+        <div class="column">
+        <!-- Column for the site logo/name -->
+          <p style="color: black; font-size: 25px; font-weight: bold;">O B A K U</p>
+          <!-- Displays the site name with styling -->
+          <p style="color: black; font-size: 12px; font-weight: bold; line-height: 5px;">DENMARK</p>
+          <!-- Displays additional text (possibly location) with styling -->
+        </div>
+        <div class="column">
+        <!-- Column for customer service details -->
+          <h2 style="color:black;font-size: 18px;font-weight: bold;">Online Chat Customer Service</h2>
+          <!-- Heading for customer service information -->
+          <p>Mon-Fri: 08:00AM to 06:00PM</p>
+          <!-- Displays the operational hours for customer service -->
+          <h3>Contact number</h3>
+          <!-- Sub-heading for the contact number -->
+          <p>+977 9810010101</p>
+          <!-- Displays the contact phone number -->
+          <h4>Email address</h4>
+          <!-- Sub-heading for email addresses -->
+          <p>info@obaku.com</p>
+          <!-- Displays the first contact email -->
+          <p>us@obaku.com</p>
+          <!-- Displays the second contact email -->
+        </div>
+        <div class="column">
+        <!-- Column for additional links/information -->
+          <h5 style="margin-left :35px;margin-top: 15px; color:black;font-size: 18px;font-weight: bold;">About</h5>
+          <!-- Heading for the About section in the footer -->
+          <ul>
+          <!-- Unordered list for links -->
+            <li><a href="../PAGES/index.html"><strong>Blog</strong></a></li>
+            <!-- List item linking to the Blog page -->
+            <li><a href="../PAGES/AboutUs.html"><strong>Contact Us</strong></a></li>
+            <!-- List item linking to the Contact Us page -->
+          </ul>
+        </div>
+        <div class="column">
+        <!-- Column for social media follow links -->
+          <h6 style="margin-left: 5px;margin-top: 15px; color:black;font-size: 18px;font-weight: bold;"> Follow Us</h6>
+          <!-- Heading for social media follow links -->
+          <p><a href="https://www.facebook.com/obakudenmark" target="_blank">Facebook</a></p>
+          <!-- Link to Facebook (opens in a new tab) -->
+          <p><a href="https://www.instagram.com/obakuofficial/?hl=en" target="_blank">Instagram</a></p>
+          <!-- Link to Instagram -->
+          <p><a href="https://www.linkedin.com/company/obakudenmark/" target="_blank">LinkedIn</a></p>
+          <!-- Link to LinkedIn -->
+          <p><a href="https://www.pinterest.com/obakudenmark/" target="_blank">Pinterest</a></p>
+          <!-- Link to Pinterest -->
+        </div>
+      </div>
+    </section>
+    <p class="copyright">
+      &copy; 2025 Obaku-Inspired. All rights reserved.
+      <!-- Copyright notice in the footer -->
+    </p>
+  </footer>
+  <script src="../javascrip/homefinal.js"></script>
+  <!-- Includes an external JavaScript file for additional functionality -->
+  <a href="#" class="to-top">
+  <!-- Anchor link for a "Back to Top" button -->
+    <img src="../photos/angle-up-solid.svg" alt="Back to Top" width="40" height="40">
+    <!-- Image used as the "Back to Top" button icon with specified width and height -->
+  </a>
+  <script>
+    // JavaScript to control the "Back to Top" button visibility
+    const toTop = document.querySelector('.to-top');
+    // Selects the element with the class "to-top" and assigns it to the variable "toTop"
+    window.addEventListener("scroll", () => {
+    // Adds an event listener that fires when the window is scrolled
+      if (window.pageYOffset > 100) {
+      // Checks if the vertical scroll offset is greater than 100 pixels
+        toTop.classList.add("active");
+        // Adds the "active" class to the "to-top" element to display it
+      } else {
+        toTop.classList.remove("active");
+        // Removes the "active" class when the scroll position is 100 pixels or less
+      }
+    });
+  </script>
+  <!-- End of inline JavaScript -->
+</body>
+<!-- End of the document body -->
+</html>
+<!-- End of the HTML document -->
